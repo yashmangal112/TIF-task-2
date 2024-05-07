@@ -11,7 +11,8 @@ const JobDetailsForm: React.FC<{
   onNext: () => void;
   onPrev: () => void;
 }> = ({onNext, onPrev}) => {
-  const { state, setState } = useData(); // Use the useData hook to access the global state
+  const { state, setState } = useData() as { state: any; setState: React.Dispatch<any> };  // Use the useData hook to access the global state
+
   const { handleChange, errors, touched, handleBlur, handleSubmit, values } =
     useFormik<IJobDetails>({
       initialValues: state.jobDetails, // Set form values from global state

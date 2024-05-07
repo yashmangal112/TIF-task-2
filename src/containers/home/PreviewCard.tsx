@@ -36,8 +36,7 @@ const KeyValue: React.FC<{
 };
 
 const PreviewCard = () => {
-  const { state } = useData();
-  
+  const { state } = useData() as { state: any; setState: React.Dispatch<any> };  // Use the useData hook to access the global state
   return (
     <Box p="1rem">
       <Box borderRadius="10px" bgColor="gray.100" height="fit-content">

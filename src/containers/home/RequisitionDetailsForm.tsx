@@ -13,7 +13,7 @@ import { genderOptions, urgencyOptions } from "./constants";
 const RequisitionDetailsForm: React.FC<{ onNext: () => void }> = ({
   onNext,
 }) => {
-  const { state, setState } = useData(); // Use the useData hook to access the global state
+  const { state, setState } = useData() as { state: any; setState: React.Dispatch<any> };  // Use the useData hook to access the global state
 
   const {
     handleChange,
