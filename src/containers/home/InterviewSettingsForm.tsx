@@ -15,7 +15,7 @@ const InterviewDetailsForm: React.FC<{
   onPrev: () => void;
 
 }> = ({onPrev}) => {
-  const {state, setState} = useData(); // Use the useData hook to access the global state
+  const { state, setState } = useData() as { state: any; setState: React.Dispatch<any> };  // Use the useData hook to access the global state
   const {
     errors,
     touched,
